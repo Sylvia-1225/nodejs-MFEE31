@@ -14,6 +14,7 @@ let doWorkPromise = function (job, timer) {
         setTimeout(() => {
             let now = new Date();
             resolve(`完成工作 ${job} at ${now.toISOString()}`);
+            // reject('故意發生錯誤');
         }, timer);
     });
 };
@@ -30,6 +31,7 @@ let brushPromise = doWorkPromise('刷牙', 3000);
 brushPromise
     .then((data) => {
         console.log('brushPromise', data);
+        
         let eatPromise = doWorkPromise('吃早餐', 5000);
         return eatPromise;
     })
