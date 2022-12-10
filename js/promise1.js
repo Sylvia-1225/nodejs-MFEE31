@@ -20,7 +20,10 @@ let doWorkPromise = function (job, timer) {
 
 let now = new Date();
 console.log(`工作開始 at ${now.toISOString()}`);
+
+// 刷牙 -> 吃早餐 -> 寫功課
 let brushPromise = doWorkPromise('刷牙', 3000);
+// promise chain
 brushPromise
     .then((data) => {
         console.log(data);
