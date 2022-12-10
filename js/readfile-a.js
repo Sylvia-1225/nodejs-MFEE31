@@ -18,10 +18,15 @@ let p = new Promise((resolve, reject) => {
 // async function doJob() {
 //     let data = await p;
 // }
-// // 函式名稱() -> 呼叫
 // doJob;
 
+// 定義
+// function test(參數1, 參數2) {}
+// 呼叫
+// test();
+
 // IIEF
+// 函式名稱() -> 立即呼叫
 (async () => {
     try {
         let data = await p;
