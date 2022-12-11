@@ -4,7 +4,7 @@
 // 1. 安裝 npm i axios
 // 2. 引用 require
 // 3. 去讀官方文件
-// 2618 2430 2412
+// 2610 2330 2412
 const fs = require('fs/promises');
 const axios = require('axios');
 
@@ -14,10 +14,10 @@ const axios = require('axios');
     let stockNo = target;
     let date = '20221111';
     let response = await axios.get(`http://54.71.133.152:3000/stocks`, {
-      params: {
-        stockNo,
-        date,
-      },
+        params: {
+            stockNo,
+            date,
+        },
     });
 
     console.log('await', response.data);
